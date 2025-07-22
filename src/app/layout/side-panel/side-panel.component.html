@@ -1,0 +1,8 @@
+<nav class="side-nav">
+  <h2>Menu</h2>
+  <ul>
+@for (item of visibleItems(); track item.route) {
+          <li><a [routerLink]="item.route">{{ item.title }}</a></li>
+        }
+  </ul>
+</nav>

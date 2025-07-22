@@ -1,0 +1,34 @@
+<div>
+    <!--  -->
+    <div class="form-wrapper" [formGroup]="searchForm">
+        <h1>Reactive form</h1>
+
+        <!-- 下拉選單 -->
+        <label>
+            Category:
+            <select formControlName="category" >
+                @for (opt of categories; track opt.value) {
+                    <option [value]="opt.value">{{ opt.label }}</option>
+                }
+            </select>
+        </label>
+
+        <!-- 文字輸入框 -->
+        <label>
+            Title:
+            <input type="text" formControlName="title" />
+        </label>
+
+        <!-- 送出按鈕 -->
+        <button type="button" (click)="onSubmit()">Submit</button>
+    </div>
+        <label>
+        Add Option:
+        <input type="text" [formControl]="newOptionValue" />
+    <button type="button" (click)="addOption()">Add to list</button>
+    </label>
+    <div>
+        <h1>template-driven form</h1>
+    </div>
+
+</div>

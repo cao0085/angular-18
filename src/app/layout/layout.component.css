@@ -1,0 +1,30 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.side {
+  width: 220px;
+  background-color: #f3f3f3;
+  border-right: 1px solid #ccc;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.footer {
+  height: 48px;
+  background-color: #e0e0e0;
+  text-align: center;
+  line-height: 48px;
+}

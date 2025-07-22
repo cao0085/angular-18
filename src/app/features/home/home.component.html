@@ -1,0 +1,26 @@
+<button (click)="showDialog = true">開啟註冊表單</button>
+
+<app-dialog [visible]="showDialog" (closed)="showDialog = false">
+  <div dialog-header>
+    <h3>📋 註冊表單</h3>
+  </div>
+
+  <div dialog-body>
+    <form [formGroup]="form">
+      <label>
+        使用者名稱:
+        <input type="text" formControlName="username" />
+      </label>
+      <br />
+      <label>
+        電子信箱:
+        <input type="email" formControlName="email" />
+      </label>
+    </form>
+  </div>
+
+  <div dialog-footer>
+    <button (click)="showDialog = false">取消</button>
+    <button [disabled]="form.invalid" (click)="submit()">送出</button>
+  </div>
+</app-dialog>
