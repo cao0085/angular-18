@@ -9,7 +9,7 @@ export const routes: Routes = [
       {
         path: '',
         loadComponent: () =>
-          import('./features/home/home.component').then(m => m.HomeComponent),
+          import('@features/home/home.component').then(m => m.HomeComponent),
       },
       {
         path: 'about',
@@ -18,7 +18,7 @@ export const routes: Routes = [
       },      {
         path: 'form',
         loadComponent: () =>
-          import('./features/form/form.component').then(m => m.FormComponent),
+          import('@features/form/form.component').then(m => m.FormComponent),
       },
     ]
   },
